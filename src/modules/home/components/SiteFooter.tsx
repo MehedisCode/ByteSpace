@@ -32,12 +32,12 @@ export function SiteFooter() {
             {FOOTER.columns.map((column, columnIndex) => (
               <ul key={columnIndex} className="space-y-4">
                 {column.map((item) => (
-                  <li key={item}>
+                  <li key={item.label}>
                     <Link
-                      href="#"
+                      href={item.href}
                       className="font-sans text-sm text-body transition-colors hover:text-ink"
                     >
-                      {item}
+                      {item.label}
                     </Link>
                   </li>
                 ))}
@@ -51,11 +51,11 @@ export function SiteFooter() {
           <div className="flex flex-wrap gap-6">
             {FOOTER.bottomLinks.map((link) => (
               <Link
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="transition-colors hover:text-ink"
               >
-                {link}
+                {link.label}
               </Link>
             ))}
           </div>

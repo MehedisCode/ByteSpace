@@ -1,3 +1,4 @@
+import { ROUTES } from "@/config/routes";
 import type {
   Avatar,
   FloatingCardData,
@@ -11,14 +12,14 @@ export const BRAND = {
 } as const;
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "#", active: true },
-  { label: "Courses", href: "#" },
-  { label: "Creators", href: "#" },
+  { label: "Home", href: ROUTES.home, active: true },
+  { label: "Courses", href: ROUTES.search },
+  { label: "Creators", href: ROUTES.creators },
 ];
 
 export const AUTH_LINKS: NavLink[] = [
-  { label: "Sign In", href: "#" },
-  { label: "Join Us", href: "#" },
+  { label: "Sign In", href: ROUTES.login },
+  { label: "Join Us", href: ROUTES.register },
 ];
 
 export const HERO_COPY = {

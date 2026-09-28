@@ -1,5 +1,4 @@
-"use client";
-
+import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { ICONS, SEARCH_COPY } from "../hero.data";
 
@@ -11,7 +10,7 @@ export function HeroSearchBar({ className }: HeroSearchBarProps) {
   return (
     <form
       role="search"
-      onSubmit={(event) => event.preventDefault()}
+      action={ROUTES.search}
       className={cn(
         "flex w-full max-w-[581px] items-center gap-4",
         className,
@@ -28,6 +27,7 @@ export function HeroSearchBar({ className }: HeroSearchBarProps) {
         />
         <input
           type="search"
+          name="q"
           placeholder={SEARCH_COPY.placeholder}
           aria-label={SEARCH_COPY.placeholder}
           className="h-full w-full bg-transparent font-sans text-lg text-ink outline-none placeholder:text-muted"
