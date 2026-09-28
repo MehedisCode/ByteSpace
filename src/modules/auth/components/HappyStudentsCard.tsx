@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { HAPPY_STUDENTS, HAPPY_STUDENT_AVATARS } from "../register.data";
+import { HAPPY_STUDENT_AVATARS, HAPPY_STUDENTS } from "../collage.data";
 
 type HappyStudentsCardProps = {
   className?: string;

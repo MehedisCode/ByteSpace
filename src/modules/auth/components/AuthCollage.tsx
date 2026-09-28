@@ -2,14 +2,19 @@ import Image from "next/image";
 import { CourseCard } from "@/modules/home";
 import { frameBoxStyle } from "@/lib/frame";
 import { cn } from "@/lib/utils";
-import { COLLAGE_COURSES, COLLAGE_ORNAMENTS, HAPPY_STUDENTS } from "../register.data";
+import {
+  COLLAGE_COURSES,
+  COLLAGE_ORNAMENTS,
+  HAPPY_STUDENTS,
+} from "../collage.data";
 import { HappyStudentsCard } from "./HappyStudentsCard";
 
-type RegisterCollageProps = {
+type AuthCollageProps = {
   className?: string;
 };
 
-export function RegisterCollage({ className }: RegisterCollageProps) {
+/** Shared decorative collage used by the Login and Register pages. */
+export function AuthCollage({ className }: AuthCollageProps) {
   return (
     <div
       aria-hidden
