@@ -1,4 +1,5 @@
 export { HeroSection } from "./components/HeroSection";
+export { HeroGrid } from "./components/HeroGrid";
 export type {
   FloatingCardData,
   FrameBox,
