@@ -1,5 +1,5 @@
 import type { FrameBox } from "@/lib/frame";
-import { COURSES } from "@/modules/home";
+import type { Course } from "@/modules/home";
 
 export const REGISTER_INTRO = {
   eyebrow: "Sign up and come in",
@@ -40,17 +40,36 @@ export const HAPPY_STUDENTS = {
   box: { x: 348, y: 740, width: 258, height: 123 } as FrameBox,
 } as const;
 
-/** Two course cards layered into the left collage. */
-export const COLLAGE_COURSES = [
+const COLLAGE_COURSE_BASE = {
+  author: "by purepearl studio",
+  rating: "4.5",
+  level: "Beginner",
+  badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],
+  price: "$25",
+  priceSuffix: "/lifetime",
+};
+
+/** Two course cards layered into the left collage (register-specific art). */
+export const COLLAGE_COURSES: { course: Course; box: FrameBox }[] = [
   {
-    course: COURSES[2],
-    box: { x: 122, y: 394, width: 373, height: 384 } as FrameBox,
+    course: {
+      ...COLLAGE_COURSE_BASE,
+      slug: "build-digital-asset",
+      title: "Build Digital Asset",
+      image: "/figma/register/course-build-digital.jpg",
+    },
+    box: { x: 122, y: 394, width: 373, height: 384 },
   },
   {
-    course: COURSES[1],
-    box: { x: 233, y: 305, width: 373, height: 384 } as FrameBox,
+    course: {
+      ...COLLAGE_COURSE_BASE,
+      slug: "the-power-of-big-data",
+      title: "the Power of Big Data",
+      image: "/figma/register/course-big-data.jpg",
+    },
+    box: { x: 233, y: 305, width: 373, height: 384 },
   },
-] as const;
+];
 
 export type RegisterOrnament = {
   src: string;
