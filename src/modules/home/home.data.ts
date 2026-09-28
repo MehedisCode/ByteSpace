@@ -1,3 +1,5 @@
+import { ROUTES } from "@/config/routes";
+
 export const LOGO_STRIP = {
   src: "/figma/home/logo-partner.png",
   alt: "Trusted partners",
@@ -34,6 +36,7 @@ export const CATEGORY_FILTERS: string[][] = [
 export const FILTERS_ACTIVE = "Featured";
 
 export type Course = {
+  slug: string;
   title: string;
   author: string;
   image: string;
@@ -44,66 +47,51 @@ export type Course = {
   priceSuffix: string;
 };
 
+const COURSE_BASE = {
+  author: "by purepearl studio",
+  rating: "4.5",
+  level: "Beginner",
+  badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],
+  price: "$25",
+  priceSuffix: "/lifetime",
+};
+
 export const COURSES: Course[] = [
   {
+    ...COURSE_BASE,
+    slug: "learn-figma-from-basic",
     title: "Learn Figma from Basic",
-    author: "by purepearl studio",
     image: "/figma/home/course-1.png",
-    rating: "4.5",
-    level: "Beginner",
-    badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],
-    price: "$25",
-    priceSuffix: "/lifetime",
   },
   {
+    ...COURSE_BASE,
+    slug: "build-digital-asset",
     title: "Build Digital Asset",
-    author: "by purepearl studio",
     image: "/figma/home/course-2.png",
-    rating: "4.5",
-    level: "Beginner",
-    badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],
-    price: "$25",
-    priceSuffix: "/lifetime",
   },
   {
+    ...COURSE_BASE,
+    slug: "the-power-of-big-data",
     title: "the Power of Big Data",
-    author: "by purepearl studio",
     image: "/figma/home/course-3.png",
-    rating: "4.5",
-    level: "Beginner",
-    badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],
-    price: "$25",
-    priceSuffix: "/lifetime",
   },
   {
+    ...COURSE_BASE,
+    slug: "balancing-productivity-and-self-care",
     title: "Balancing Productivity and Self-Care",
-    author: "by purepearl studio",
     image: "/figma/home/course-4.png",
-    rating: "4.5",
-    level: "Beginner",
-    badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],
-    price: "$25",
-    priceSuffix: "/lifetime",
   },
   {
+    ...COURSE_BASE,
+    slug: "mastering-money-management",
     title: "Mastering Money Management",
-    author: "by purepearl studio",
     image: "/figma/home/course-5.png",
-    rating: "4.5",
-    level: "Beginner",
-    badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],
-    price: "$25",
-    priceSuffix: "/lifetime",
   },
   {
+    ...COURSE_BASE,
+    slug: "from-idea-to-startup-success",
     title: "From Idea to Startup Success",
-    author: "by purepearl studio",
     image: "/figma/home/course-6.png",
-    rating: "4.5",
-    level: "Beginner",
-    badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],
-    price: "$25",
-    priceSuffix: "/lifetime",
   },
 ];
 
@@ -215,10 +203,32 @@ export const FOOTER = {
   legal:
     "By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.",
   columns: [
-    ["Featured Courses", "Featured Categories", "Business", "IT", "Design"],
-    ["Development", "Marketing", "Photography", "Finance", "Sport"],
-    ["Become a Creator", "Affiliate Program", "Contact", "Help", "About"],
+    [
+      { label: "Featured Courses", href: ROUTES.search },
+      { label: "Featured Categories", href: ROUTES.search },
+      { label: "Business", href: ROUTES.search },
+      { label: "IT", href: ROUTES.search },
+      { label: "Design", href: ROUTES.search },
+    ],
+    [
+      { label: "Development", href: ROUTES.search },
+      { label: "Marketing", href: ROUTES.search },
+      { label: "Photography", href: ROUTES.search },
+      { label: "Finance", href: ROUTES.search },
+      { label: "Sport", href: ROUTES.search },
+    ],
+    [
+      { label: "Become a Creator", href: ROUTES.register },
+      { label: "Affiliate Program", href: "#" },
+      { label: "Contact", href: "#" },
+      { label: "Help", href: "#" },
+      { label: "About", href: "#" },
+    ],
   ],
   copyright: "@ 2023 ByteSpace. All rights reserved.",
-  bottomLinks: ["Privacy Policy", "Terms of Service", "Cookies Settings"],
+  bottomLinks: [
+    { label: "Privacy Policy", href: "#" },
+    { label: "Terms of Service", href: "#" },
+    { label: "Cookies Settings", href: "#" },
+  ],
 } as const;

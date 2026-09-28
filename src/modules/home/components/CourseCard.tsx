@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { courseDetails } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { COURSE_AVATARS } from "../home.data";
 import type { Course } from "../home.data";
@@ -6,17 +8,14 @@ import { SignalBarsIcon, StarIcon } from "./icons";
 
 type CourseCardProps = {
   course: Course;
+  /** When false the card renders as a static block (used in decorative collages). */
+  link?: boolean;
   className?: string;
 };
 
-export function CourseCard({ course, className }: CourseCardProps) {
-  return (
-    <article
-      className={cn(
-        "flex flex-col rounded-[20px] border border-black/5 bg-white p-4 shadow-[0_16px_40px_-28px_rgba(4,8,25,0.4)]",
-        className,
-      )}
-    >
+export function CourseCard({ course, link = true, className }: CourseCardProps) {
+  const card = (
+    <article className="flex h-full flex-col rounded-[20px] border border-black/5 bg-white p-4 shadow-[0_16px_40px_-28px_rgba(4,8,25,0.4)]">
       <div className="relative overflow-hidden rounded-[14px]">
         <Image
           src={course.image}
@@ -70,5 +69,21 @@ export function CourseCard({ course, className }: CourseCardProps) {
         </span>
       </p>
     </article>
+  );
+
+  if (!link) {
+    return <div className={className}>{card}</div>;
+  }
+
+  return (
+    <Link
+      href={courseDetails(course.slug)}
+      className={cn(
+        "group block rounded-[20px] transition-transform duration-200 hover:-translate-y-1",
+        className,
+      )}
+    >
+      {card}
+    </Link>
   );
 }

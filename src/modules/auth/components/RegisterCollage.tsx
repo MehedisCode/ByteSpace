@@ -17,7 +17,7 @@ export function RegisterCollage({ className }: RegisterCollageProps) {
     >
       {COLLAGE_COURSES.map(({ course, box }) => (
         <div key={course.title} className="absolute" style={frameBoxStyle(box)}>
-          <CourseCard course={course} className="h-full" />
+          <CourseCard course={course} link={false} className="h-full" />
         </div>
       ))}
 

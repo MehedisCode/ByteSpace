@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { FormEvent } from "react";
+import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { REGISTER_FORM } from "../register.data";
 
@@ -58,7 +59,7 @@ export function RegisterForm({ className }: RegisterFormProps) {
 
       <p className="mt-8 text-center font-sans text-base text-pill">
         {REGISTER_FORM.footerQuestion}{" "}
-        <Link href="/login" className="text-brand hover:underline">
+        <Link href={ROUTES.login} className="text-brand hover:underline">
           {REGISTER_FORM.footerAction}
         </Link>
       </p>
