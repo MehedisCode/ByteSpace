@@ -1,15 +1,22 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { COURSE_AVATARS } from "../home.data";
 import type { Course } from "../home.data";
 import { SignalBarsIcon, StarIcon } from "./icons";
 
 type CourseCardProps = {
   course: Course;
+  className?: string;
 };
 
-export function CourseCard({ course }: CourseCardProps) {
+export function CourseCard({ course, className }: CourseCardProps) {
   return (
-    <article className="flex flex-col rounded-[20px] border border-black/5 bg-white p-4 shadow-[0_16px_40px_-28px_rgba(4,8,25,0.4)]">
+    <article
+      className={cn(
+        "flex flex-col rounded-[20px] border border-black/5 bg-white p-4 shadow-[0_16px_40px_-28px_rgba(4,8,25,0.4)]",
+        className,
+      )}
+    >
       <div className="relative overflow-hidden rounded-[14px]">
         <Image
           src={course.image}
