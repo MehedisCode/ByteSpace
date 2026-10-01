@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { AUTH_LINKS, BRAND, ICONS, NAV_LINKS } from "../hero.data";
+import { AUTH_LINKS, BRAND, ICONS } from "../hero.data";
+import { HeaderNav } from "./HeaderNav";
 
 export function HeroHeader() {
   return (
@@ -13,20 +13,7 @@ export function HeroHeader() {
         </span>
       </Link>
 
-      <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link
-            key={link.label}
-            href={link.href}
-            className={cn(
-              "font-sans text-base text-subtle transition-opacity hover:opacity-75",
-              link.active ? "font-medium" : "font-normal",
-            )}
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
+      <HeaderNav />
 
       <div className="hidden items-center gap-6 lg:flex">
         {AUTH_LINKS.map((link) => (
