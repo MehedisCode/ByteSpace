@@ -1,4 +1,5 @@
-import { ROUTES } from "@/config/routes";
+import { DEFAULT_CREATOR_SLUG } from "@/config/creators";
+import { creatorProfile, ROUTES } from "@/config/routes";
 import type {
   Avatar,
   FloatingCardData,
@@ -14,7 +15,7 @@ export const BRAND = {
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: ROUTES.home, active: true },
   { label: "Courses", href: ROUTES.search },
-  { label: "Creators", href: ROUTES.creators },
+  { label: "Creators", href: creatorProfile(DEFAULT_CREATOR_SLUG) },
 ];
 
 export const AUTH_LINKS: NavLink[] = [
