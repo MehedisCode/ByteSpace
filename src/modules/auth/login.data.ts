@@ -27,8 +27,8 @@ export const LOGIN_FORM = {
   action: "Sign In",
   dividerLabel: "or",
   socials: [
+    { provider: "facebook", label: "Sign in with Facebook" },
     { provider: "google", label: "Sign in with Google" },
-    { provider: "apple", label: "Sign in with Apple" },
   ],
   footerQuestion: "New user?",
   footerAction: "Create an account",

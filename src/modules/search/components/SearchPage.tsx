@@ -11,7 +11,7 @@ export function SearchPage() {
       <SearchHero />
 
       <section className="bg-white">
-        <div className="mx-auto w-full max-w-[1200px] px-6 pb-16 pt-10 lg:pb-[72px] lg:pt-[72px]">
+        <div className="mx-auto w-full max-w-[1248px] px-6 pb-16 pt-10 lg:pb-[72px] lg:pt-[72px]">
           <SearchFilterBar />
 
           <div className="mt-8">

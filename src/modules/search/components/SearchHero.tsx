@@ -34,7 +34,7 @@ export function SearchHero() {
 
             <button
               type="button"
-              className="flex h-[48px] shrink-0 items-center gap-2 rounded-pill bg-white px-5 font-sans text-lg font-medium text-ink"
+              className="flex h-[48px] shrink-0 items-center gap-2 rounded-pill bg-accent px-5 font-sans text-lg font-medium text-ink transition-colors hover:bg-accent-strong"
             >
               {SEARCH_HERO.scope}
               <ChevronDownIcon className="size-6" />
