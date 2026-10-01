@@ -1,3 +1,4 @@
+import type { CardCourse } from "@/components/course-card";
 import { DEFAULT_CREATOR_SLUG } from "@/config/creators";
 import { ROUTES } from "@/config/routes";
 
@@ -36,18 +37,7 @@ export const CATEGORY_FILTERS: string[][] = [
 
 export const FILTERS_ACTIVE = "Featured";
 
-export type Course = {
-  slug: string;
-  title: string;
-  author: string;
-  creatorSlug: string;
-  image: string;
-  rating: string;
-  level: string;
-  badges: string[];
-  price: string;
-  priceSuffix: string;
-};
+export type Course = CardCourse;
 
 const COURSE_BASE = {
   author: "by purepearl studio",
@@ -64,41 +54,40 @@ export const COURSES: Course[] = [
     ...COURSE_BASE,
     slug: "learn-figma-from-basic",
     title: "Learn Figma from Basic",
-    image: "/figma/home/course-1.png",
+    image: "/figma/courses/course-1.jpg",
   },
   {
     ...COURSE_BASE,
     slug: "build-digital-asset",
     title: "Build Digital Asset",
-    image: "/figma/home/course-2.png",
+    image: "/figma/courses/course-2.jpg",
   },
   {
     ...COURSE_BASE,
     slug: "the-power-of-big-data",
     title: "the Power of Big Data",
-    image: "/figma/home/course-3.png",
+    image: "/figma/courses/course-3.jpg",
   },
   {
     ...COURSE_BASE,
     slug: "balancing-productivity-and-self-care",
     title: "Balancing Productivity and Self-Care",
-    image: "/figma/home/course-4.png",
+    image: "/figma/courses/course-4.jpg",
   },
   {
     ...COURSE_BASE,
     slug: "mastering-money-management",
     title: "Mastering Money Management",
-    image: "/figma/home/course-5.png",
+    image: "/figma/courses/course-5.jpg",
   },
   {
     ...COURSE_BASE,
     slug: "from-idea-to-startup-success",
     title: "From Idea to Startup Success",
-    image: "/figma/home/course-6.png",
+    image: "/figma/courses/course-6.jpg",
   },
 ];
 
-export const COURSE_AVATARS = "/figma/home/course-avatars.png";
 export const COURSE_LEARNERS_BADGE = "26+";
 
 export const PATHS_HEADING = {
@@ -130,10 +119,6 @@ export const GROWTH = {
     { value: "70+", label: "Courses" },
     { value: "16", label: "Creators" },
   ],
-  showcase: {
-    src: "/figma/home/growth-showcase-1.png",
-    alt: "Course highlights and learning progress",
-  },
 } as const;
 
 export const CREATOR_BLOCK = {
@@ -146,10 +131,6 @@ export const CREATOR_BLOCK = {
     "Flexibility and Autonomy",
     "Build a Community",
   ],
-  image: {
-    src: "/figma/home/growth-showcase-2.png",
-    alt: "Creator revenue dashboard",
-  },
 } as const;
 
 export const CREATOR_CTA = {
@@ -157,8 +138,6 @@ export const CREATOR_CTA = {
   subtitle:
     "Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.",
   action: "Join as Creator",
-  // Same 3D ornament composition as the hero, re-used here.
-  ornaments: "/figma/hero/ornament-group.png",
 } as const;
 
 export type Testimonial = {

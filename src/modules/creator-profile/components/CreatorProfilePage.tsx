@@ -1,4 +1,5 @@
-import { CourseCard, SiteFooter } from "@/modules/home";
+import { CourseCard } from "@/components/course-card";
+import { SiteFooter } from "@/modules/home";
 import { SearchFilterBar } from "@/modules/search";
 import { CREATOR_COURSES } from "../creator.data";
 import { CreatorHero } from "./CreatorHero";
