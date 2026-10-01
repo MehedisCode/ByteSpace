@@ -4,7 +4,7 @@ import { ModuleIcon } from "./icons";
 
 const TABS = [
   { key: "about", label: "About" },
-  { key: "lessons", label: "Lesson" },
+  { key: "lessons", label: "Lessons" },
   { key: "reviews", label: "Reviews" },
 ] as const;
 
