@@ -69,7 +69,7 @@ export function LessonsMain({ slug }: LessonsMainProps) {
         </p>
       </div>
 
-      <div className="mt-6 rounded-2xl bg-white p-4 shadow-[0_16px_40px_-32px_rgba(4,8,25,0.5)]">
+      <div className="mt-6 rounded-2xl border border-[#ced0d3] bg-white p-4">
         <p className="font-sans text-sm font-medium text-ink">
           {progressCard.label}
         </p>
