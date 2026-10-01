@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { courseLessons } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { ENROLL } from "../course-details.data";
 import {
@@ -16,10 +18,13 @@ const INCLUDE_ICONS = [
 ] as const;
 
 type EnrollCardProps = {
+  /** When provided, lesson rows link to the lessons page. */
+  slug?: string;
   className?: string;
 };
 
-export function EnrollCard({ className }: EnrollCardProps) {
+export function EnrollCard({ slug, className }: EnrollCardProps) {
+  const lessonsHref = slug ? courseLessons(slug) : undefined;
   return (
     <aside
       className={cn(
@@ -32,24 +37,50 @@ export function EnrollCard({ className }: EnrollCardProps) {
       </p>
 
       <ul className="mt-6 space-y-3">
-        {ENROLL.lessons.map((lesson) => (
-          <li key={lesson.no} className="flex items-start gap-3">
-            <span className="font-sans text-base font-medium text-ink">
-              {lesson.no}
-            </span>
-            <span className="flex-1 font-sans text-base font-medium text-ink">
-              {lesson.title}
-            </span>
-            <span className="shrink-0 font-sans text-base text-brand">
-              {lesson.duration}
-            </span>
-          </li>
-        ))}
+        {ENROLL.lessons.map((lesson) => {
+          const row = (
+            <>
+              <span className="font-sans text-base font-medium text-ink">
+                {lesson.no}
+              </span>
+              <span className="flex-1 font-sans text-base font-medium text-ink">
+                {lesson.title}
+              </span>
+              <span className="shrink-0 font-sans text-base text-brand">
+                {lesson.duration}
+              </span>
+            </>
+          );
+
+          return (
+            <li key={lesson.no}>
+              {lessonsHref ? (
+                <Link
+                  href={lessonsHref}
+                  className="flex items-start gap-3 transition-opacity hover:opacity-70"
+                >
+                  {row}
+                </Link>
+              ) : (
+                <div className="flex items-start gap-3">{row}</div>
+              )}
+            </li>
+          );
+        })}
       </ul>
 
-      <p className="mt-3 font-sans text-base text-pill">
-        {ENROLL.moreLessons}
-      </p>
+      {lessonsHref ? (
+        <Link
+          href={lessonsHref}
+          className="mt-3 inline-block font-sans text-base text-pill transition-colors hover:text-ink"
+        >
+          {ENROLL.moreLessons}
+        </Link>
+      ) : (
+        <p className="mt-3 font-sans text-base text-pill">
+          {ENROLL.moreLessons}
+        </p>
+      )}
 
       <p className="mt-6 font-sans text-base leading-relaxed text-pill">
         {ENROLL.cta}

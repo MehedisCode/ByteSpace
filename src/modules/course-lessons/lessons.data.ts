@@ -1,6 +1,4 @@
 export const LESSONS_CONTENT = {
-  tabs: ["About", "Lesson", "Reviews"],
-  activeTab: "Lesson",
   exploreHeading: "Explore the Modules",
   exploreText:
     "Immerse yourself in the course content as we break down each module into comprehensive lessons, providing practical insights and hands-on experiences.",

@@ -7,10 +7,18 @@ export const metadata: Metadata = {
     "Explore the course modules, lesson content and your learning progress.",
 };
 
-export default function CourseLessonsRoute() {
+type CourseLessonsProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function CourseLessonsRoute({
+  params,
+}: CourseLessonsProps) {
+  const { slug } = await params;
+
   return (
     <main className="flex-1">
-      <LessonsPage />
+      <LessonsPage slug={slug} />
     </main>
   );
 }

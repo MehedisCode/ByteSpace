@@ -1,9 +1,17 @@
 import { CourseDetailsPage } from "@/modules/course-details";
 
-export default function CourseDetailsRoute() {
+type CourseDetailsProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function CourseDetailsRoute({
+  params,
+}: CourseDetailsProps) {
+  const { slug } = await params;
+
   return (
     <main className="flex-1">
-      <CourseDetailsPage />
+      <CourseDetailsPage slug={slug} />
     </main>
   );
 }

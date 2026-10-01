@@ -9,8 +9,6 @@ export const COURSE_DETAILS = {
     { key: "students", label: "199 Students" },
   ],
   share: "Share",
-  tabs: ["About", "Lessons", "Reviews"],
-  activeTab: "About",
   descriptionHeading: "Description",
   description:
     'Embark on an enlightening exploration into the world of digital creation with our comprehensive course, "Build Digital Assets: A Comprehensive Guide." This transformative learning experience invites you to delve deep into the intricacies of crafting impactful digital content. From laying the groundwork with foundational concepts to mastering advanced techniques, this guide is meticulously curated to empower you with the skills essential for navigating the dynamic landscape of digital asset creation.',

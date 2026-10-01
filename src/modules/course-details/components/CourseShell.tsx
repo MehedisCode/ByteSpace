@@ -5,11 +5,12 @@ import { CoursePreviewImage } from "./CoursePreviewImage";
 import { EnrollCard } from "./EnrollCard";
 
 type CourseShellProps = {
+  slug: string;
   children: ReactNode;
 };
 
 /** Shared layout for the course detail/lessons/reviews pages. */
-export function CourseShell({ children }: CourseShellProps) {
+export function CourseShell({ slug, children }: CourseShellProps) {
   return (
     <>
       <CourseHero />
@@ -22,7 +23,10 @@ export function CourseShell({ children }: CourseShellProps) {
               <div className="mt-10 lg:mt-[125px]">{children}</div>
             </div>
 
-            <EnrollCard className="lg:sticky lg:top-6 lg:self-start" />
+            <EnrollCard
+              slug={slug}
+              className="lg:sticky lg:top-6 lg:self-start"
+            />
           </div>
         </div>
       </section>

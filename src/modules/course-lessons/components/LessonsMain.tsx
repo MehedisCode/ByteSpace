@@ -1,31 +1,23 @@
-import { cn } from "@/lib/utils";
+import { CourseTabs } from "@/modules/course-details";
 import { LESSONS_CONTENT, LESSON_MODULES } from "../lessons.data";
 import { ModuleIcon } from "./icons";
 
-export function LessonsMain() {
+const TABS = [
+  { key: "about", label: "About" },
+  { key: "lessons", label: "Lesson" },
+  { key: "reviews", label: "Reviews" },
+] as const;
+
+type LessonsMainProps = {
+  slug: string;
+};
+
+export function LessonsMain({ slug }: LessonsMainProps) {
   const { progressCard } = LESSONS_CONTENT;
 
   return (
     <div>
-      <div className="flex flex-wrap items-center gap-3">
-        {LESSONS_CONTENT.tabs.map((tab) => {
-          const active = tab === LESSONS_CONTENT.activeTab;
-          return (
-            <button
-              key={tab}
-              type="button"
-              className={cn(
-                "h-[43px] rounded-pill px-5 font-sans text-base font-medium transition-colors",
-                active
-                  ? "bg-accent text-ink"
-                  : "bg-subtle text-pill hover:bg-track",
-              )}
-            >
-              {tab}
-            </button>
-          );
-        })}
-      </div>
+      <CourseTabs slug={slug} active="lessons" tabs={[...TABS]} />
 
       <div className="mt-10">
         <h2 className="font-display text-xl font-semibold text-ink">

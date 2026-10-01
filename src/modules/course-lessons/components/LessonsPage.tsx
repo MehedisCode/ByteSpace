@@ -1,10 +1,14 @@
 import { CourseShell } from "@/modules/course-details";
 import { LessonsMain } from "./LessonsMain";
 
-export function LessonsPage() {
+type LessonsPageProps = {
+  slug: string;
+};
+
+export function LessonsPage({ slug }: LessonsPageProps) {
   return (
-    <CourseShell>
-      <LessonsMain />
+    <CourseShell slug={slug}>
+      <LessonsMain slug={slug} />
     </CourseShell>
   );
 }
