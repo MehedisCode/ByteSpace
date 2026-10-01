@@ -42,7 +42,7 @@ export function CourseCard({ course, link = true, className }: CourseCardProps) 
           {course.badges.map((badge) => (
             <span
               key={badge}
-              className="flex h-[26px] items-center whitespace-nowrap rounded-pill bg-track px-2.5 font-sans text-xs font-medium text-body"
+              className="flex h-[26px] items-center whitespace-nowrap rounded-pill bg-track/80 px-2.5 font-sans text-xs font-medium text-body backdrop-blur-sm"
             >
               {badge}
             </span>
@@ -60,7 +60,7 @@ export function CourseCard({ course, link = true, className }: CourseCardProps) 
         </span>
       </div>
 
-      <p className="font-sans text-xs text-brand">
+      <p className="font-sans text-xs text-body">
         {link ? (
           <Link
             href={creatorProfile(course.creatorSlug)}

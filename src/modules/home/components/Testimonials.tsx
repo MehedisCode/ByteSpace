@@ -1,10 +1,34 @@
 import Image from "next/image";
+import { radialGlow } from "@/lib/glow";
 import { TESTIMONIALS, TESTIMONIALS_HEADING } from "../home.data";
+
+/** Figma radial glows: x is the offset from the 1440 frame centre. */
+const GLOWS = [
+  { x: 122, y: -241, size: 1137, rgb: "203,252,1", opacity: 0.4 },
+  { x: -325, y: -138, size: 672, rgb: "203,252,1", opacity: 0.6 },
+  { x: -1162, y: 149, size: 1137, rgb: "0,59,226", opacity: 0.24 },
+];
 
 export function Testimonials() {
   return (
-    <section className="relative overflow-hidden bg-white bg-[radial-gradient(60%_60%_at_88%_10%,#defba0_0%,transparent_60%),radial-gradient(70%_60%_at_6%_94%,#dcd9f7_0%,transparent_60%)]">
-      <div className="mx-auto w-full max-w-[1204px] px-6 py-16 lg:py-[100px]">
+    <section className="relative overflow-hidden bg-[#fafafa]">
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        {GLOWS.map((glow) => (
+          <div
+            key={`${glow.x}-${glow.y}`}
+            className="absolute rounded-full"
+            style={{
+              left: `calc(50% + ${glow.x}px)`,
+              top: glow.y,
+              width: glow.size,
+              height: glow.size,
+              background: radialGlow(glow.rgb, glow.opacity),
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative mx-auto w-full max-w-[1204px] px-6 py-16 lg:py-[100px]">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
           <h2 className="font-display text-[32px] font-semibold leading-[1.15] text-black lg:text-[44px]">
             {TESTIMONIALS_HEADING.title}

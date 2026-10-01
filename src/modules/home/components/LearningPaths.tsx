@@ -4,7 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export function LearningPaths() {
   return (
-    <section className="bg-white pt-16 lg:pt-[72px]">
+    <section className="bg-white pt-16 pb-16 lg:pt-[72px] lg:pb-[120px]">
       <SectionHeading
         title={PATHS_HEADING.title}
         subtitle={PATHS_HEADING.subtitle}
