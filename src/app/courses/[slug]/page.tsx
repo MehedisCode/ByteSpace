@@ -1,18 +1,9 @@
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { CourseDetailsPage } from "@/modules/course-details";
 
-type CourseDetailsProps = {
-  params: Promise<{ slug: string }>;
-};
-
-export default async function CourseDetailsRoute({
-  params,
-}: CourseDetailsProps) {
-  const { slug } = await params;
-
+export default function CourseDetailsRoute() {
   return (
-    <PlaceholderPage
-      title="Course Details"
-      description={`Details for "${slug}" are coming soon.`}
-    />
+    <main className="flex-1">
+      <CourseDetailsPage />
+    </main>
   );
 }
