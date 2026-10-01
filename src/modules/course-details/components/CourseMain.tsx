@@ -49,7 +49,7 @@ export function CourseMain() {
               alt=""
               width={167}
               height={125}
-              className="h-auto w-full rounded-[12px] object-cover"
+              className="h-[125px] w-full rounded-[12px] object-cover"
             />
           ))}
         </div>

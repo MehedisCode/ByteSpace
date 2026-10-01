@@ -24,7 +24,7 @@ export function CourseHero() {
             <p className="mt-3 font-display text-lg font-semibold text-white sm:text-xl">
               {COURSE_DETAILS.subtitle}
             </p>
-            <p className="mt-3 font-sans text-lg font-medium text-[#f1f4fe]">
+            <p className="mt-3 font-sans text-lg font-medium text-subtitle">
               {COURSE_DETAILS.author}
             </p>
 
@@ -36,7 +36,7 @@ export function CourseHero() {
                     key={item.key}
                     className="flex h-10 items-center gap-2 rounded-[20px] bg-white/90 px-4 font-sans text-base font-medium text-ink backdrop-blur"
                   >
-                    <Icon className="size-6 text-ink" />
+                    <Icon className="size-6 text-brand" />
                     {item.label}
                   </span>
                 );

@@ -11,7 +11,7 @@ export function CourseDetailsPage() {
     <>
       <CourseHero />
 
-      <section className="relative z-30 bg-white">
+      <section className="relative z-30 flow-root bg-white">
         <div className="mx-auto w-full max-w-[1200px] px-6 pb-16 lg:-mt-[541px] lg:pb-[100px]">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_412px] lg:gap-[68px]">
             <div className="min-w-0">

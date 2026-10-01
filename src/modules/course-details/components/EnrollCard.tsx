@@ -1,7 +1,19 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ENROLL } from "../course-details.data";
-import { IncludeIcon } from "./icons";
+import {
+  CertificateIcon,
+  ConsultationIcon,
+  LearningResourcesIcon,
+  LessonVideosIcon,
+} from "./icons";
+
+const INCLUDE_ICONS = [
+  LearningResourcesIcon,
+  LessonVideosIcon,
+  CertificateIcon,
+  ConsultationIcon,
+] as const;
 
 type EnrollCardProps = {
   className?: string;
@@ -62,15 +74,18 @@ export function EnrollCard({ className }: EnrollCardProps) {
       </p>
 
       <ul className="mt-6 space-y-3">
-        {ENROLL.includes.map((item) => (
-          <li
-            key={item}
-            className="flex items-center gap-3 font-sans text-base text-pill"
-          >
-            <IncludeIcon className="size-6 shrink-0 text-pill" />
-            {item}
-          </li>
-        ))}
+        {ENROLL.includes.map((item, index) => {
+          const Icon = INCLUDE_ICONS[index];
+          return (
+            <li
+              key={item}
+              className="flex items-center gap-3 font-sans text-base text-pill"
+            >
+              <Icon className="size-6 shrink-0 text-brand" />
+              {item}
+            </li>
+          );
+        })}
       </ul>
 
       <div className="mt-6 flex items-center gap-3 border-t border-[#e5e6e8] pt-6">
