@@ -1,3 +1,4 @@
+import { DEFAULT_CREATOR_SLUG } from "@/config/creators";
 import { ROUTES } from "@/config/routes";
 
 export const LOGO_STRIP = {
@@ -39,6 +40,7 @@ export type Course = {
   slug: string;
   title: string;
   author: string;
+  creatorSlug: string;
   image: string;
   rating: string;
   level: string;
@@ -49,6 +51,7 @@ export type Course = {
 
 const COURSE_BASE = {
   author: "by purepearl studio",
+  creatorSlug: DEFAULT_CREATOR_SLUG,
   rating: "4.5",
   level: "Beginner",
   badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],

@@ -1,6 +1,8 @@
+import { DEFAULT_CREATOR_SLUG } from "@/config/creators";
 import type { Course } from "@/modules/home";
 
 export const CREATOR = {
+  slug: DEFAULT_CREATOR_SLUG,
   name: "PurePearl Studio",
   badge: "Creator",
   role: "Passionate UI/UX, Web designer",
@@ -16,6 +18,7 @@ export const CREATOR = {
 
 const COURSE_BASE = {
   author: "by purepearl studio",
+  creatorSlug: DEFAULT_CREATOR_SLUG,
   rating: "4.5",
   level: "Beginner",
   badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],

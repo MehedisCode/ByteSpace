@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { courseDetails } from "@/config/routes";
+import { courseDetails, creatorProfile } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { COURSE_AVATARS } from "../home.data";
 import type { Course } from "../home.data";
@@ -14,8 +14,22 @@ type CourseCardProps = {
 };
 
 export function CourseCard({ course, link = true, className }: CourseCardProps) {
-  const card = (
-    <article className="flex h-full flex-col rounded-[20px] border border-black/5 bg-white p-4 shadow-[0_16px_40px_-28px_rgba(4,8,25,0.4)]">
+  return (
+    <article
+      className={cn(
+        "group relative flex h-full flex-col rounded-[20px] border border-black/5 bg-white p-4 shadow-[0_16px_40px_-28px_rgba(4,8,25,0.4)]",
+        link && "transition-transform duration-200 hover:-translate-y-1",
+        className,
+      )}
+    >
+      {link && (
+        <Link
+          href={courseDetails(course.slug)}
+          aria-label={course.title}
+          className="absolute inset-0 z-0 rounded-[20px]"
+        />
+      )}
+
       <div className="relative overflow-hidden rounded-[14px]">
         <Image
           src={course.image}
@@ -46,7 +60,18 @@ export function CourseCard({ course, link = true, className }: CourseCardProps) 
         </span>
       </div>
 
-      <p className="mt-1 font-sans text-xs text-body">{course.author}</p>
+      <p className="mt-1 font-sans text-xs text-body">
+        {link ? (
+          <Link
+            href={creatorProfile(course.creatorSlug)}
+            className="relative z-10 transition-colors hover:text-ink"
+          >
+            {course.author}
+          </Link>
+        ) : (
+          course.author
+        )}
+      </p>
 
       <div className="mt-3 flex items-center gap-2">
         <span className="flex items-center gap-1.5 rounded-pill bg-subtle px-3 py-1.5 font-sans text-xs font-medium text-pill">
@@ -69,21 +94,5 @@ export function CourseCard({ course, link = true, className }: CourseCardProps) 
         </span>
       </p>
     </article>
-  );
-
-  if (!link) {
-    return <div className={className}>{card}</div>;
-  }
-
-  return (
-    <Link
-      href={courseDetails(course.slug)}
-      className={cn(
-        "group block rounded-[20px] transition-transform duration-200 hover:-translate-y-1",
-        className,
-      )}
-    >
-      {card}
-    </Link>
   );
 }
