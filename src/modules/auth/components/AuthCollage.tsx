@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CourseCard } from "@/modules/home";
+import { CourseCard } from "@/components/course-card";
 import { frameBoxStyle } from "@/lib/frame";
 import { cn } from "@/lib/utils";
 import {

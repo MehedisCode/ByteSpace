@@ -1,4 +1,4 @@
-import { CourseCard } from "@/modules/home";
+import { CourseCard } from "@/components/course-card";
 import { SEARCH_RESULTS } from "../search.data";
 
 export function SearchResults() {
