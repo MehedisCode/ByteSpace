@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { courseLessons } from "@/config/routes";
+import { courseLessons, creatorProfile } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { ENROLL } from "../course-details.data";
 import {
@@ -119,7 +119,10 @@ export function EnrollCard({ slug, className }: EnrollCardProps) {
         })}
       </ul>
 
-      <div className="mt-6 flex items-center gap-3 border-t border-[#e5e6e8] pt-6">
+      <Link
+        href={creatorProfile(ENROLL.instructor.slug)}
+        className="group mt-6 flex items-center gap-3 border-t border-[#e5e6e8] pt-6"
+      >
         <Image
           src={ENROLL.instructor.avatar}
           alt={ENROLL.instructor.name}
@@ -128,14 +131,14 @@ export function EnrollCard({ slug, className }: EnrollCardProps) {
           className="size-[52px] rounded-full object-cover"
         />
         <div>
-          <p className="font-sans text-lg font-medium text-ink">
+          <p className="font-sans text-lg font-medium text-ink transition-colors group-hover:text-brand">
             {ENROLL.instructor.name}
           </p>
           <p className="font-sans text-base text-pill">
             {ENROLL.instructor.role}
           </p>
         </div>
-      </div>
+      </Link>
 
       <p className="mt-6 font-sans text-base leading-relaxed text-pill">
         {ENROLL.cta}

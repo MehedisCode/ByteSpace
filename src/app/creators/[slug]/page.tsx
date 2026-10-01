@@ -1,18 +1,16 @@
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import type { Metadata } from "next";
+import { CreatorProfilePage } from "@/modules/creator-profile";
 
-type CreatorProfileProps = {
-  params: Promise<{ slug: string }>;
+export const metadata: Metadata = {
+  title: "Creator Profile — ByteSpace",
+  description:
+    "Explore the creator's portfolio, courses, followers and more on ByteSpace.",
 };
 
-export default async function CreatorProfileRoute({
-  params,
-}: CreatorProfileProps) {
-  const { slug } = await params;
-
+export default function CreatorProfileRoute() {
   return (
-    <PlaceholderPage
-      title="Creator Profile"
-      description={`The profile for "${slug}" is coming soon.`}
-    />
+    <main className="flex-1">
+      <CreatorProfilePage />
+    </main>
   );
 }

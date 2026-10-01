@@ -1,3 +1,4 @@
+import { DEFAULT_CREATOR_SLUG } from "@/config/creators";
 import type { FrameBox } from "@/lib/frame";
 import type { Course } from "@/modules/home";
 
@@ -16,6 +17,7 @@ export const HAPPY_STUDENT_AVATARS = Array.from(
 
 const COLLAGE_COURSE_BASE = {
   author: "by purepearl studio",
+  creatorSlug: DEFAULT_CREATOR_SLUG,
   rating: "4.5",
   level: "Beginner",
   badges: ["17 Lessons", "2 hours 16 mins", "59 Comments"],

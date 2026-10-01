@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { creatorProfile } from "@/config/routes";
 import { HeroGrid, HeroHeader } from "@/modules/hero";
 import { COURSE_DETAILS } from "../course-details.data";
 import { LevelIcon, ShareIcon, StarIcon, StudentsIcon } from "./icons";
@@ -25,7 +27,12 @@ export function CourseHero() {
               {COURSE_DETAILS.subtitle}
             </p>
             <p className="mt-3 font-sans text-lg font-medium text-subtitle">
-              {COURSE_DETAILS.author}
+              <Link
+                href={creatorProfile(COURSE_DETAILS.creatorSlug)}
+                className="transition-opacity hover:opacity-75"
+              >
+                {COURSE_DETAILS.author}
+              </Link>
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2.5">
