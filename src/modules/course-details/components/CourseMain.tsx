@@ -1,30 +1,22 @@
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 import { COURSE_DETAILS } from "../course-details.data";
+import { CourseTabs } from "./CourseTabs";
 import { CheckIcon } from "./icons";
 
-export function CourseMain() {
+const TABS = [
+  { key: "about", label: "About" },
+  { key: "lessons", label: "Lessons" },
+  { key: "reviews", label: "Reviews" },
+] as const;
+
+type CourseMainProps = {
+  slug: string;
+};
+
+export function CourseMain({ slug }: CourseMainProps) {
   return (
     <div>
-      <div className="flex flex-wrap items-center gap-3">
-        {COURSE_DETAILS.tabs.map((tab) => {
-          const active = tab === COURSE_DETAILS.activeTab;
-          return (
-            <button
-              key={tab}
-              type="button"
-              className={cn(
-                "h-[43px] rounded-pill px-5 font-sans text-base font-medium transition-colors",
-                active
-                  ? "bg-accent text-ink"
-                  : "bg-subtle text-pill hover:bg-track",
-              )}
-            >
-              {tab}
-            </button>
-          );
-        })}
-      </div>
+      <CourseTabs slug={slug} active="about" tabs={[...TABS]} />
 
       <div className="mt-10">
         <h2 className="font-display text-xl font-semibold text-ink">
