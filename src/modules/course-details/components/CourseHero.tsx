@@ -17,8 +17,8 @@ export function CourseHero() {
         <HeroHeader />
 
         <div className="flex flex-col gap-8 px-6 pt-10 lg:flex-row lg:items-start lg:justify-between lg:px-[122px] lg:pt-[52px]">
-          <div className="max-w-[769px]">
-            <h1 className="font-display text-[28px] font-semibold leading-[1.15] text-white sm:text-[36px]">
+          <div className="max-w-[820px]">
+            <h1 className="font-display text-[28px] font-semibold leading-[1.15] text-white sm:text-[36px] lg:whitespace-nowrap">
               {COURSE_DETAILS.title}
             </h1>
             <p className="mt-3 font-display text-lg font-semibold text-white sm:text-xl">
@@ -36,7 +36,7 @@ export function CourseHero() {
                     key={item.key}
                     className="flex h-10 items-center gap-2 rounded-[20px] bg-white/90 px-4 font-sans text-base font-medium text-ink backdrop-blur"
                   >
-                    <Icon className="size-6 text-muted" />
+                    <Icon className="size-6 text-ink" />
                     {item.label}
                   </span>
                 );

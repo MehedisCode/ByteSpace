@@ -15,6 +15,14 @@ export function ShareIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function PlayIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <path d="M8 5.5v13l11-6.5-11-6.5z" />
+    </svg>
+  );
+}
+
 export function LevelIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
