@@ -17,7 +17,7 @@ export function CourseCard({ course, link = true, className }: CourseCardProps) 
   return (
     <article
       className={cn(
-        "group relative flex h-full flex-col rounded-[24px] border border-[#ced0d3] bg-white p-4",
+        "group relative flex flex-col rounded-[24px] border border-[#ced0d3] bg-white p-4",
         link && "transition-transform duration-200 hover:-translate-y-1",
         className,
       )}

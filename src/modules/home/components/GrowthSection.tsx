@@ -10,6 +10,7 @@ const GLOWS = [
   { x: 91, y: -458, size: 1137, rgb: "0,59,226", opacity: 0.08 },
   { x: -1228, y: 183, size: 1137, rgb: "0,59,226", opacity: 0.16 },
   { x: 2, y: 788, size: 1137, rgb: "0,59,226", opacity: 0.24 },
+  { x: -1007, y: 946, size: 672, rgb: "203,252,1", opacity: 0.6 },
 ];
 
 export function GrowthSection() {

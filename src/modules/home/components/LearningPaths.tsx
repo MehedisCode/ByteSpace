@@ -14,7 +14,7 @@ export function LearningPaths() {
         {LEARNING_PATHS.map((path) => (
           <div
             key={path.label}
-            className="flex aspect-square flex-col items-center justify-center gap-4 rounded-[28px] border border-black/5 bg-white shadow-[0_16px_40px_-28px_rgba(4,8,25,0.4)]"
+            className="flex aspect-square flex-col items-center justify-center gap-4 rounded-[24px] border border-[#ced0d3] bg-white"
           >
             <Image
               src={path.icon}

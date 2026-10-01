@@ -10,8 +10,9 @@ export function CreatorCta() {
       <CtaOrnaments className="hidden lg:block" />
 
       <div className="relative z-20 mx-auto flex w-full max-w-[964px] flex-col items-center px-6 py-20 text-center lg:min-h-[488px] lg:justify-center lg:py-0">
-        <h2 className="font-display text-[32px] font-semibold leading-[1.15] text-white lg:text-[44px]">
-          {CREATOR_CTA.heading}
+        <h2 className="font-display text-[32px] font-semibold leading-[1.2] text-white lg:text-[44px]">
+          <span className="block">Unlock Your Potential as a</span>
+          <span className="block">Creator with ByteSpace</span>
         </h2>
         <p className="mt-6 font-sans text-base leading-relaxed text-subtitle lg:text-lg">
           {CREATOR_CTA.subtitle}
