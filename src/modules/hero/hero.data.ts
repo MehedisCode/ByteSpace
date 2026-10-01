@@ -13,9 +13,13 @@ export const BRAND = {
 } as const;
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: ROUTES.home, active: true },
-  { label: "Courses", href: ROUTES.search },
-  { label: "Creators", href: creatorProfile(DEFAULT_CREATOR_SLUG) },
+  { label: "Home", href: ROUTES.home, match: ["/"] },
+  { label: "Courses", href: ROUTES.search, match: [ROUTES.search, ROUTES.courses] },
+  {
+    label: "Creators",
+    href: creatorProfile(DEFAULT_CREATOR_SLUG),
+    match: [ROUTES.creators],
+  },
 ];
 
 export const AUTH_LINKS: NavLink[] = [

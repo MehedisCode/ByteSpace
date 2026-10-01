@@ -12,7 +12,8 @@ export type FrameBox = {
 export type NavLink = {
   label: string;
   href: string;
-  active?: boolean;
+  /** Path prefixes that mark this link active. */
+  match?: string[];
 };
 
 export type Avatar = {
