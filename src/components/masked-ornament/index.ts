@@ -1,0 +1,1 @@
+export { MaskedOrnament } from "./MaskedOrnament";
