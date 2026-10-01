@@ -5,7 +5,7 @@ import { NewsletterForm } from "./NewsletterForm";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-white">
+    <footer className="border-t border-[#ced0d3] bg-white">
       <div className="mx-auto w-full max-w-[1440px] px-6 pb-10 pt-16 lg:px-[120px] lg:pt-[78px]">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.9fr)] lg:gap-16">
           <div>
@@ -46,7 +46,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-black/10 pt-6 font-sans text-xs text-body sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-[#ced0d3] pt-6 font-sans text-xs text-body sm:flex-row sm:items-center sm:justify-between">
           <p>{FOOTER.copyright}</p>
           <div className="flex flex-wrap gap-6">
             {FOOTER.bottomLinks.map((link) => (
