@@ -1,0 +1,1 @@
+export { TintedImage } from "./TintedImage";

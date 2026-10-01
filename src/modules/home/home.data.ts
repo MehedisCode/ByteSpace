@@ -119,10 +119,6 @@ export const GROWTH = {
     { value: "70+", label: "Courses" },
     { value: "16", label: "Creators" },
   ],
-  showcase: {
-    src: "/figma/home/growth-showcase-1.png",
-    alt: "Course highlights and learning progress",
-  },
 } as const;
 
 export const CREATOR_BLOCK = {
@@ -135,10 +131,6 @@ export const CREATOR_BLOCK = {
     "Flexibility and Autonomy",
     "Build a Community",
   ],
-  image: {
-    src: "/figma/home/growth-showcase-2.png",
-    alt: "Creator revenue dashboard",
-  },
 } as const;
 
 export const CREATOR_CTA = {
@@ -146,8 +138,6 @@ export const CREATOR_CTA = {
   subtitle:
     "Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.",
   action: "Join as Creator",
-  // Same 3D ornament composition as the hero, re-used here.
-  ornaments: "/figma/hero/ornament-group.png",
 } as const;
 
 export type Testimonial = {
