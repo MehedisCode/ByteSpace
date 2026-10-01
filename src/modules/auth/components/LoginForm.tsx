@@ -5,11 +5,11 @@ import type { FormEvent } from "react";
 import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { LOGIN_FORM } from "../login.data";
-import { AppleIcon, GoogleIcon } from "./login-icons";
+import { FacebookIcon, GoogleIcon } from "./login-icons";
 
 const SOCIAL_ICONS = {
+  facebook: FacebookIcon,
   google: GoogleIcon,
-  apple: AppleIcon,
 } as const;
 
 type LoginFormProps = {
@@ -84,7 +84,7 @@ export function LoginForm({ className }: LoginFormProps) {
                 key={social.provider}
                 type="button"
                 aria-label={social.label}
-                className="flex size-[72px] items-center justify-center rounded-[24px] border border-[#d1d1d1] bg-[#d9d9d9] text-black transition-colors hover:bg-[#cfcfcf]"
+                className="flex size-[72px] items-center justify-center rounded-[24px] border border-[#d1d1d1] bg-white text-black transition-colors hover:bg-subtle"
               >
                 <Icon className="size-[33px]" />
               </button>
