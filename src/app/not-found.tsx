@@ -1,10 +1,9 @@
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import { NotFoundPage } from "@/modules/not-found";
 
 export default function NotFound() {
   return (
-    <PlaceholderPage
-      title="404 — Page not found"
-      description="The page you are looking for doesn't exist or has been moved."
-    />
+    <main className="flex-1">
+      <NotFoundPage />
+    </main>
   );
 }
