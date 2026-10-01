@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TintedImage } from "@/components/tinted-image";
+import { MaskedOrnament } from "@/components/masked-ornament";
 import { FLOATING_SHADOW_FILTER } from "@/lib/floating-shadow";
 import { RatingCard } from "@/modules/hero";
 import { RevenueCard } from "./GrowthCards";
@@ -49,9 +49,9 @@ export function GrowthShowcaseTwo() {
           className="absolute left-[283px] top-[413px] w-[258px]"
         />
 
-        <TintedImage
+        <MaskedOrnament
           src="/figma/home/zigzag.png"
-          tint="#d4fb20"
+          color="#d4fb20"
           className="absolute left-[305px] top-[114px] h-[215px] w-[215px]"
         />
       </div>

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { CourseCard } from "@/components/course-card";
+import { MaskedOrnament } from "@/components/masked-ornament";
 import { frameBoxStyle } from "@/lib/frame";
 import { cn } from "@/lib/utils";
 import {
@@ -36,27 +36,10 @@ export function AuthCollage({ className }: AuthCollageProps) {
           className="absolute"
           style={frameBoxStyle(ornament.box)}
         >
-          <Image
+          <MaskedOrnament
             src={ornament.src}
-            alt=""
-            fill
-            sizes={`${ornament.box.width}px`}
-            className="object-contain"
-          />
-          <span
-            className="absolute inset-0"
-            style={{
-              backgroundColor: ornament.tint,
-              mixBlendMode: ornament.blend,
-              maskImage: `url(${ornament.src})`,
-              maskSize: "contain",
-              maskRepeat: "no-repeat",
-              maskPosition: "center",
-              WebkitMaskImage: `url(${ornament.src})`,
-              WebkitMaskSize: "contain",
-              WebkitMaskRepeat: "no-repeat",
-              WebkitMaskPosition: "center",
-            }}
+            color={ornament.color}
+            className="h-full w-full"
           />
         </div>
       ))}

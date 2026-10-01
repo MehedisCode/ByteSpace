@@ -49,30 +49,25 @@ export const COLLAGE_COURSES: { course: Course; box: FrameBox }[] = [
 
 export type CollageOrnament = {
   src: string;
-  /** Tint applied over the grayscale 3D render (Figma's overlay colour). */
-  tint: string;
-  /** How the tint is blended: `color` for saturated tints, `screen` for light. */
-  blend: "color" | "screen";
+  /** Flat silhouette colour applied over the render's alpha mask. */
+  color: string;
   box: FrameBox;
 };
 
 export const COLLAGE_ORNAMENTS: CollageOrnament[] = [
   {
     src: "/figma/register/cone-1.png",
-    tint: "#d4fb20",
-    blend: "color",
+    color: "#d4fb20",
     box: { x: 151, y: 320, width: 146, height: 146 },
   },
   {
     src: "/figma/register/cone-2.png",
-    tint: "#d4fb20",
-    blend: "color",
+    color: "#d4fb20",
     box: { x: 97, y: 702, width: 188, height: 188 },
   },
   {
     src: "/figma/register/zigzag.png",
-    tint: "#f5f5f6",
-    blend: "screen",
+    color: "#f5f5f6",
     box: { x: 470, y: 626, width: 175, height: 175 },
   },
 ];

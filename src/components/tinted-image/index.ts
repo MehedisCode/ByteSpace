@@ -1,1 +1,0 @@
-export { TintedImage } from "./TintedImage";

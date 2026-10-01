@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CourseCard } from "@/components/course-card";
-import { TintedImage } from "@/components/tinted-image";
+import { MaskedOrnament } from "@/components/masked-ornament";
 import { FLOATING_SHADOW_FILTER } from "@/lib/floating-shadow";
 import { COURSES } from "../../home.data";
 import { MiniProgressCard } from "./GrowthCards";
@@ -32,9 +32,9 @@ export function GrowthShowcaseOne() {
           className="absolute left-[345px] top-[213px] w-[232px]"
         />
 
-        <TintedImage
+        <MaskedOrnament
           src="/figma/home/squiggle-lime.png"
-          tint="#d4fb20"
+          color="#d4fb20"
           className="absolute left-[406px] top-[67px] h-[215px] w-[215px]"
         />
       </div>
