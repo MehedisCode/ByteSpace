@@ -1,18 +1,16 @@
-import { PlaceholderPage } from "@/components/PlaceholderPage";
+import type { Metadata } from "next";
+import { LessonsPage } from "@/modules/course-lessons";
 
-type CourseLessonsProps = {
-  params: Promise<{ slug: string }>;
+export const metadata: Metadata = {
+  title: "Course Lessons — ByteSpace",
+  description:
+    "Explore the course modules, lesson content and your learning progress.",
 };
 
-export default async function CourseLessonsRoute({
-  params,
-}: CourseLessonsProps) {
-  const { slug } = await params;
-
+export default function CourseLessonsRoute() {
   return (
-    <PlaceholderPage
-      title="Course Lessons"
-      description={`Lessons for "${slug}" are coming soon.`}
-    />
+    <main className="flex-1">
+      <LessonsPage />
+    </main>
   );
 }
