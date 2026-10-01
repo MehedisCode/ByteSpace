@@ -1,4 +1,11 @@
-import { CourseDetailsPage } from "@/modules/course-details";
+import type { Metadata } from "next";
+import { CourseMain } from "@/modules/course-details";
+
+export const metadata: Metadata = {
+  title: "Course — ByteSpace",
+  description:
+    "Course overview, curriculum highlights and creator details on ByteSpace.",
+};
 
 type CourseDetailsProps = {
   params: Promise<{ slug: string }>;
@@ -9,9 +16,5 @@ export default async function CourseDetailsRoute({
 }: CourseDetailsProps) {
   const { slug } = await params;
 
-  return (
-    <main className="flex-1">
-      <CourseDetailsPage slug={slug} />
-    </main>
-  );
+  return <CourseMain slug={slug} />;
 }

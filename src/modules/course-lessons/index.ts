@@ -1,2 +1,2 @@
-export { LessonsPage } from "./components/LessonsPage";
+export { LessonsMain } from "./components/LessonsMain";
 export type { LessonModule } from "./lessons.data";
