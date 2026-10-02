@@ -27,7 +27,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <link
           rel="stylesheet"
-          href="https://api.fontshare.com/v2/css?f%5B%5D=satoshi@400,500,700&f%5B%5D=clash-display@700&display=swap"
+          href="https://api.fontshare.com/v2/css?f%5B%5D=satoshi@400,500,700&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f%5B%5D=clash-display@700&display=swap"
         />
       </head>
       <body className="flex min-h-full flex-col bg-brand font-sans text-white">

@@ -36,7 +36,7 @@ export function CreatorHero() {
               </div>
             </div>
 
-            <p className="max-w-[1197px] font-sans text-lg leading-relaxed text-subtitle">
+            <p className="max-w-[1197px] whitespace-pre-line font-sans text-lg leading-relaxed text-subtitle">
               {CREATOR.description}
             </p>
           </div>
