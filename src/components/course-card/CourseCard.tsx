@@ -26,7 +26,7 @@ export function CourseCard({ course, link = true, className }: CourseCardProps) 
         <Link
           href={courseDetails(course.slug)}
           aria-label={course.title}
-          className="absolute inset-0 z-0 rounded-[24px]"
+          className="absolute inset-0 z-10 rounded-[24px]"
         />
       )}
 
@@ -65,7 +65,7 @@ export function CourseCard({ course, link = true, className }: CourseCardProps) 
         {link ? (
           <Link
             href={creatorProfile(course.creatorSlug)}
-            className="relative z-10 text-brand transition-opacity hover:opacity-75"
+            className="relative z-20 text-brand transition-opacity hover:opacity-75"
           >
             {course.author}
           </Link>
