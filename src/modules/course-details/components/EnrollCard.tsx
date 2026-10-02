@@ -28,7 +28,7 @@ export function EnrollCard({ slug, className }: EnrollCardProps) {
   return (
     <aside
       className={cn(
-        "rounded-[24px] bg-white p-8 shadow-[0_24px_70px_-50px_rgba(4,8,25,0.5)] lg:p-10",
+        "rounded-[24px] border border-[#ced0d3] bg-white p-8 lg:p-10",
         className,
       )}
     >
