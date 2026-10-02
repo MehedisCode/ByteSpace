@@ -3,7 +3,7 @@ import { DEFAULT_CREATOR_SLUG } from "@/config/creators";
 export const COURSE_DETAILS = {
   title: "Build Digital Asset: A Comprehensive Guide",
   subtitle: "Unlock the Power of Digital Creation with Expert Guidance",
-  author: "by purepearl studio",
+  author: "purepearl studio",
   creatorSlug: DEFAULT_CREATOR_SLUG,
   heroImage: "/figma/course-details/hero.jpg",
   meta: [

@@ -11,7 +11,7 @@ export type FrameBox = {
   height: number;
 };
 
-export const FRAME_WIDTH = 1440;
+const FRAME_WIDTH = 1440;
 export const FRAME_CENTER_X = FRAME_WIDTH / 2;
 
 /** Centers a frame box horizontally while keeping its design-space offset. */

@@ -1,6 +1,6 @@
 import Image from "next/image";
+import { frameLeft } from "@/lib/frame";
 import { cn } from "@/lib/utils";
-import { frameLeft } from "../hero.layout";
 import type { ImageAsset } from "../hero.types";
 
 type FrameImageProps = {

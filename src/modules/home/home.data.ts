@@ -3,8 +3,14 @@ import { DEFAULT_CREATOR_SLUG } from "@/config/creators";
 import { ROUTES } from "@/config/routes";
 
 export const LOGO_STRIP = {
-  src: "/figma/home/logo-partner.png",
   alt: "Trusted partners",
+  logos: [
+    { src: "/figma/home/logos/logo-1.svg", width: 167, height: 41 },
+    { src: "/figma/home/logos/logo-2.svg", width: 168, height: 41 },
+    { src: "/figma/home/logos/logo-3.svg", width: 170, height: 41 },
+    { src: "/figma/home/logos/logo-4.svg", width: 170, height: 41 },
+    { src: "/figma/home/logos/logo-5.svg", width: 169, height: 42 },
+  ],
 } as const;
 
 export const SKILLS_HEADING = {
@@ -40,7 +46,7 @@ export const FILTERS_ACTIVE = "Featured";
 export type Course = CardCourse;
 
 const COURSE_BASE = {
-  author: "by purepearl studio",
+  author: "purepearl studio",
   creatorSlug: DEFAULT_CREATOR_SLUG,
   rating: "4.5",
   level: "Beginner",
@@ -88,8 +94,6 @@ export const COURSES: Course[] = [
   },
 ];
 
-export const COURSE_LEARNERS_BADGE = "26+";
-
 export const PATHS_HEADING = {
   title: "Explore Diverse Learning Paths at Bytespace",
   subtitle:
@@ -102,12 +106,12 @@ export type LearningPath = {
 };
 
 export const LEARNING_PATHS: LearningPath[] = [
-  { label: "Design", icon: "/figma/home/category-design.png" },
-  { label: "Development", icon: "/figma/home/category-development.png" },
-  { label: "IT & Software", icon: "/figma/home/category-it-software.png" },
-  { label: "Business", icon: "/figma/home/category-business.png" },
-  { label: "Marketing", icon: "/figma/home/category-marketing.png" },
-  { label: "Photography", icon: "/figma/home/category-photography.png" },
+  { label: "Design", icon: "/figma/home/category-design.svg" },
+  { label: "Development", icon: "/figma/home/category-development.svg" },
+  { label: "IT & Software", icon: "/figma/home/category-it-software.svg" },
+  { label: "Business", icon: "/figma/home/category-business.svg" },
+  { label: "Marketing", icon: "/figma/home/category-marketing.svg" },
+  { label: "Photography", icon: "/figma/home/category-photography.svg" },
 ];
 
 export const GROWTH = {

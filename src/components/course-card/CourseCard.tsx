@@ -61,15 +61,16 @@ export function CourseCard({ course, link = true, className }: CourseCardProps) 
       </div>
 
       <p className="font-sans text-xs text-body">
+        by{" "}
         {link ? (
           <Link
             href={creatorProfile(course.creatorSlug)}
-            className="relative z-10 transition-opacity hover:opacity-75"
+            className="relative z-10 text-brand transition-opacity hover:opacity-75"
           >
             {course.author}
           </Link>
         ) : (
-          course.author
+          <span className="text-brand">{course.author}</span>
         )}
       </p>
 

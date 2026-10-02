@@ -17,7 +17,7 @@ export const CREATOR = {
 } as const;
 
 const COURSE_BASE = {
-  author: "by purepearl studio",
+  author: "purepearl studio",
   creatorSlug: DEFAULT_CREATOR_SLUG,
   rating: "4.5",
   level: "Beginner",

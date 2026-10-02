@@ -1,6 +1,6 @@
+import { frameBoxStyle } from "@/lib/frame";
 import { cn } from "@/lib/utils";
 import { FLOATING_CARDS } from "../hero.data";
-import { frameBoxStyle } from "../hero.layout";
 import { FloatingCard } from "./FloatingCard";
 
 type FloatingCardsProps = {
