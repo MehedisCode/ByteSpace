@@ -21,6 +21,7 @@ export function GrowthShowcaseOne() {
           alt=""
           width={577}
           height={540}
+          sizes="577px"
           style={{ filter: FLOATING_SHADOW_FILTER }}
           className="pointer-events-none absolute left-0 top-[12px] w-[577px]"
         />
@@ -33,7 +34,7 @@ export function GrowthShowcaseOne() {
         />
 
         <MaskedOrnament
-          src="/figma/home/squiggle-lime.png"
+          src="/figma/home/masks/squiggle-lime.png"
           color="#d4fb20"
           className="absolute left-[406px] top-[67px] h-[215px] w-[215px]"
         />
