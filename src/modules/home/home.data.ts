@@ -106,12 +106,12 @@ export type LearningPath = {
 };
 
 export const LEARNING_PATHS: LearningPath[] = [
-  { label: "Design", icon: "/figma/home/category-design.png" },
-  { label: "Development", icon: "/figma/home/category-development.png" },
-  { label: "IT & Software", icon: "/figma/home/category-it-software.png" },
-  { label: "Business", icon: "/figma/home/category-business.png" },
-  { label: "Marketing", icon: "/figma/home/category-marketing.png" },
-  { label: "Photography", icon: "/figma/home/category-photography.png" },
+  { label: "Design", icon: "/figma/home/category-design.svg" },
+  { label: "Development", icon: "/figma/home/category-development.svg" },
+  { label: "IT & Software", icon: "/figma/home/category-it-software.svg" },
+  { label: "Business", icon: "/figma/home/category-business.svg" },
+  { label: "Marketing", icon: "/figma/home/category-marketing.svg" },
+  { label: "Photography", icon: "/figma/home/category-photography.svg" },
 ];
 
 export const GROWTH = {
