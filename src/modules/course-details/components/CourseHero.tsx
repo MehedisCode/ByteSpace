@@ -27,11 +27,12 @@ export function CourseHero() {
               {COURSE_DETAILS.subtitle}
             </p>
             <p className="mt-3 font-sans text-lg font-medium text-subtitle">
+              by{" "}
               <Link
                 href={creatorProfile(COURSE_DETAILS.creatorSlug)}
-                className="transition-opacity hover:opacity-75"
+                className="text-accent transition-opacity hover:opacity-75"
               >
-                by {COURSE_DETAILS.author}
+                {COURSE_DETAILS.author}
               </Link>
             </p>
 
