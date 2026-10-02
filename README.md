@@ -2,6 +2,8 @@
 
 A course & education platform built with Next.js — pixel-faithful to its Figma design, from the hero and course cards down to the 3D ornament renders and logo lockups.
 
+**[View live →](https://bytespace-psi-orpin.vercel.app)**
+
 **Next.js 16 · React 19 · TypeScript 5 · Tailwind CSS 4**
 
 ## Pages
@@ -78,7 +80,7 @@ Each module keeps its data in a `*.data.ts` file (copy, layout boxes, asset path
 
 ## Deployment
 
-The project deploys to **Vercel** (project `bytespace`):
+The project deploys to **Vercel** (project `bytespace`) and is live at **https://bytespace-psi-orpin.vercel.app**:
 
 - **Production branch: `staging`** — every push to `staging` deploys live automatically
 - Pushes to any other branch and every pull request get free preview URLs
