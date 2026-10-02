@@ -3,8 +3,14 @@ import { DEFAULT_CREATOR_SLUG } from "@/config/creators";
 import { ROUTES } from "@/config/routes";
 
 export const LOGO_STRIP = {
-  src: "/figma/home/logo-partner.png",
   alt: "Trusted partners",
+  logos: [
+    { src: "/figma/home/logos/logo-1.svg", width: 167, height: 41 },
+    { src: "/figma/home/logos/logo-2.svg", width: 168, height: 41 },
+    { src: "/figma/home/logos/logo-3.svg", width: 170, height: 41 },
+    { src: "/figma/home/logos/logo-4.svg", width: 170, height: 41 },
+    { src: "/figma/home/logos/logo-5.svg", width: 169, height: 42 },
+  ],
 } as const;
 
 export const SKILLS_HEADING = {
