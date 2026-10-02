@@ -5,17 +5,26 @@ import { HeaderNav } from "./HeaderNav";
 export function HeroHeader() {
   return (
     <header className="relative z-30 flex h-[120px] items-center justify-between px-6 lg:px-[122px]">
-      <Link href="/" className="flex items-center gap-2">
+      <Link
+        href="/"
+        className="flex items-center gap-2 lg:absolute lg:left-[122px] lg:top-[35px] lg:block lg:h-[37px] lg:w-[171px]"
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={BRAND.logo} alt="" width={29} height={32} />
-        <span className="font-brand text-2xl font-bold text-subtle">
+        <img
+          src={BRAND.logo}
+          alt=""
+          width={29}
+          height={32}
+          className="lg:absolute lg:left-0 lg:top-0"
+        />
+        <span className="font-brand text-2xl font-bold text-subtle lg:absolute lg:left-[37px] lg:top-[7px] lg:leading-[30px]">
           {BRAND.name}
         </span>
       </Link>
 
       <HeaderNav />
 
-      <div className="hidden items-center gap-6 lg:flex">
+      <div className="ml-auto hidden items-center gap-6 lg:flex">
         {AUTH_LINKS.map((link) => (
           <Link
             key={link.label}

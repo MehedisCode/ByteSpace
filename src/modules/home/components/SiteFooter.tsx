@@ -9,10 +9,19 @@ export function SiteFooter() {
       <div className="mx-auto w-full max-w-[1440px] px-6 pb-10 pt-16 lg:px-[120px] lg:pt-[78px]">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.9fr)] lg:gap-16">
           <div>
-            <Link href="/" className="flex items-center gap-2">
+            <Link
+              href="/"
+              className="relative block h-[37px] w-[171px]"
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={BRAND.logo} alt="" width={29} height={32} />
-              <span className="font-brand text-2xl font-bold text-ink">
+              <img
+                src={BRAND.logo}
+                alt=""
+                width={29}
+                height={32}
+                className="absolute left-0 top-0"
+              />
+              <span className="absolute left-[37px] top-[7px] font-brand text-2xl font-bold leading-[30px] text-ink">
                 {BRAND.name}
               </span>
             </Link>
