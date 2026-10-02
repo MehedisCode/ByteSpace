@@ -11,7 +11,7 @@ export function Pagination() {
       <button
         type="button"
         aria-label="Previous page"
-        className="flex h-12 w-14 items-center justify-center rounded-[24px] bg-white text-ink shadow-[0_8px_24px_-16px_rgba(4,8,25,0.5)] transition-colors hover:bg-subtle"
+        className="flex h-12 w-14 items-center justify-center rounded-[24px] border border-[#ced0d3] bg-white text-ink shadow-[0_8px_24px_-16px_rgba(4,8,25,0.5)] transition-colors hover:bg-subtle"
       >
         <ArrowLeftIcon className="size-5" />
       </button>
@@ -37,7 +37,7 @@ export function Pagination() {
       <button
         type="button"
         aria-label="Next page"
-        className="flex h-12 w-14 items-center justify-center rounded-[24px] bg-white text-ink shadow-[0_8px_24px_-16px_rgba(4,8,25,0.5)] transition-colors hover:bg-subtle"
+        className="flex h-12 w-14 items-center justify-center rounded-[24px] border border-[#ced0d3] bg-white text-ink shadow-[0_8px_24px_-16px_rgba(4,8,25,0.5)] transition-colors hover:bg-subtle"
       >
         <ArrowRightIcon className="size-5" />
       </button>
