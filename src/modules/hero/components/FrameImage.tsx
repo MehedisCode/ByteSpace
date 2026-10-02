@@ -20,6 +20,7 @@ export function FrameImage({ asset, className, priority }: FrameImageProps) {
       width={box.width}
       height={box.height}
       priority={priority}
+      sizes={`${box.width}px`}
       className={cn("absolute max-w-none", className)}
       style={{
         left: frameLeft(box),

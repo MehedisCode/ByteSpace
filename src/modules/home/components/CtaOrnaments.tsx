@@ -11,13 +11,13 @@ type Ornament = {
 
 /** Frame offsets from the 1440 centre, matching Figma's CTA ornament group. */
 const ORNAMENTS: Ornament[] = [
-  { x: 360, y: 0, size: 188, src: "/figma/home/cone-2.png", color: "#d4fb20" },
-  { x: 390, y: 289, size: 330, src: "/figma/home/squiggle-lime.png", color: "#d4fb20" },
-  { x: -838, y: -162, size: 385, src: "/figma/home/zigzag.png", color: "#d4fb20" },
-  { x: -542, y: 5, size: 175, src: "/figma/home/zigzag.png", color: "#f5f5f6" },
-  { x: -768, y: 225, size: 188, src: "/figma/home/cta-white-1.png", color: "#f5f5f6" },
-  { x: -700, y: 299, size: 342, src: "/figma/home/cone-1.png", color: "#d4fb20" },
-  { x: 506, y: 6, size: 370, src: "/figma/home/cta-white-2.png", color: "#f5f5f6" },
+  { x: 360, y: 0, size: 188, src: "/figma/home/masks/cone-2.png", color: "#d4fb20" },
+  { x: 390, y: 289, size: 330, src: "/figma/home/masks/squiggle-lime.png", color: "#d4fb20" },
+  { x: -838, y: -162, size: 385, src: "/figma/home/masks/zigzag.png", color: "#d4fb20" },
+  { x: -542, y: 5, size: 175, src: "/figma/home/masks/zigzag.png", color: "#f5f5f6" },
+  { x: -768, y: 225, size: 188, src: "/figma/home/masks/cta-white-1.png", color: "#f5f5f6" },
+  { x: -700, y: 299, size: 342, src: "/figma/home/masks/cone-1.png", color: "#d4fb20" },
+  { x: 506, y: 6, size: 370, src: "/figma/home/masks/cta-white-2.png", color: "#f5f5f6" },
 ];
 
 type CtaOrnamentsProps = {

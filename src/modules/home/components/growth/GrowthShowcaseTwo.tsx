@@ -40,6 +40,7 @@ export function GrowthShowcaseTwo() {
           alt=""
           width={435}
           height={596}
+          sizes="435px"
           style={{ filter: FLOATING_SHADOW_FILTER }}
           className="pointer-events-none absolute left-[28px] top-0 h-[596px] w-[435px] object-cover"
         />
@@ -50,7 +51,7 @@ export function GrowthShowcaseTwo() {
         />
 
         <MaskedOrnament
-          src="/figma/home/zigzag.png"
+          src="/figma/home/masks/zigzag.png"
           color="#d4fb20"
           className="absolute left-[305px] top-[114px] h-[215px] w-[215px]"
         />
