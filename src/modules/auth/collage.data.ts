@@ -32,7 +32,7 @@ export const COLLAGE_COURSES: { course: Course; box: FrameBox }[] = [
       ...COLLAGE_COURSE_BASE,
       slug: "build-digital-asset",
       title: "Build Digital Asset",
-      image: "/figma/register/course-design-tools.jpg",
+      image: "/figma/courses/course-2.jpg",
     },
     box: { x: 122, y: 394, width: 373, height: 384 },
   },
@@ -41,13 +41,13 @@ export const COLLAGE_COURSES: { course: Course; box: FrameBox }[] = [
       ...COLLAGE_COURSE_BASE,
       slug: "the-power-of-big-data",
       title: "the Power of Big Data",
-      image: "/figma/register/course-dashboard.jpg",
+      image: "/figma/courses/course-3.jpg",
     },
     box: { x: 233, y: 305, width: 373, height: 384 },
   },
 ];
 
-export type CollageOrnament = {
+type CollageOrnament = {
   src: string;
   /** Flat silhouette colour applied over the render's alpha mask. */
   color: string;
@@ -56,17 +56,17 @@ export type CollageOrnament = {
 
 export const COLLAGE_ORNAMENTS: CollageOrnament[] = [
   {
-    src: "/figma/register/cone-1.png",
+    src: "/figma/home/cone-1.png",
     color: "#d4fb20",
     box: { x: 151, y: 320, width: 146, height: 146 },
   },
   {
-    src: "/figma/register/cone-2.png",
+    src: "/figma/home/cone-2.png",
     color: "#d4fb20",
     box: { x: 97, y: 702, width: 188, height: 188 },
   },
   {
-    src: "/figma/register/zigzag.png",
+    src: "/figma/home/zigzag.png",
     color: "#f5f5f6",
     box: { x: 470, y: 626, width: 175, height: 175 },
   },

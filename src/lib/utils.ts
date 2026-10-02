@@ -1,4 +1,4 @@
-export type ClassValue = string | false | null | undefined;
+type ClassValue = string | false | null | undefined;
 
 /** Small dependency-free class name joiner. */
 export function cn(...classes: ClassValue[]): string {

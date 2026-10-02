@@ -19,7 +19,7 @@ export const REVIEWS_CONTENT = {
   filters: [5, 4, 3, 2, 1],
 } as const;
 
-export type Review = {
+type Review = {
   name: string;
   role: string;
   date: string;

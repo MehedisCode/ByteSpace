@@ -88,8 +88,6 @@ export const COURSES: Course[] = [
   },
 ];
 
-export const COURSE_LEARNERS_BADGE = "26+";
-
 export const PATHS_HEADING = {
   title: "Explore Diverse Learning Paths at Bytespace",
   subtitle:

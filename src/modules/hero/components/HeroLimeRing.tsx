@@ -1,6 +1,6 @@
+import { frameLeft } from "@/lib/frame";
 import { cn } from "@/lib/utils";
 import { LIME_RING } from "../hero.data";
-import { frameLeft } from "../hero.layout";
 
 type HeroLimeRingProps = {
   className?: string;
