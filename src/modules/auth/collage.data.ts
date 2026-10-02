@@ -56,17 +56,17 @@ type CollageOrnament = {
 
 export const COLLAGE_ORNAMENTS: CollageOrnament[] = [
   {
-    src: "/figma/home/cone-1.png",
+    src: "/figma/home/masks/cone-1.png",
     color: "#d4fb20",
     box: { x: 151, y: 320, width: 146, height: 146 },
   },
   {
-    src: "/figma/home/cone-2.png",
+    src: "/figma/home/masks/cone-2.png",
     color: "#d4fb20",
     box: { x: 97, y: 702, width: 188, height: 188 },
   },
   {
-    src: "/figma/home/zigzag.png",
+    src: "/figma/home/masks/zigzag.png",
     color: "#f5f5f6",
     box: { x: 470, y: 626, width: 175, height: 175 },
   },

@@ -49,6 +49,7 @@ export function Testimonials() {
                 alt={testimonial.name}
                 width={80}
                 height={80}
+                sizes="80px"
                 className="size-20 rounded-full object-cover"
               />
               <h3 className="mt-5 font-display text-xl font-semibold text-black">
