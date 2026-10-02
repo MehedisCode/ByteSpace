@@ -32,7 +32,7 @@ export function CourseHero() {
                 href={creatorProfile(COURSE_DETAILS.creatorSlug)}
                 className="text-accent transition-opacity hover:opacity-75"
               >
-                {COURSE_DETAILS.author}
+                by {COURSE_DETAILS.author}
               </Link>
             </p>
 
